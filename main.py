@@ -1,8 +1,9 @@
 import msvcrt
 import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 import pygame
 import time
-from utilities import limpiar
+from utilities import clear
 
 palabras = ["silla","dedo","teclado","bueno","killua","zanahoria"]
 jugando = True
@@ -21,6 +22,16 @@ error = pygame.mixer.Sound("error-beep.wav")
 # Antes del bucle principal
 point_sound = pygame.mixer.Channel(0)
 error_sound = pygame.mixer.Channel(1)
+clear()
+print("3")
+time.sleep(1)
+clear()
+print("2")
+time.sleep(1)
+clear()
+print("1")
+time.sleep(1)
+clear()
 while (jugando):
     for palabra in palabras :
         if (jugando == False) :
@@ -32,7 +43,7 @@ while (jugando):
                 else :
                     string_puntuacion = str(puntuacion)
                 if (vidas > 0) :
-                    limpiar()
+                    clear()
                     print(tablero.format(string_puntuacion,str(vidas),letra))
                     tecla_presionada = msvcrt.getwch()
                     
