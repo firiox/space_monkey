@@ -5,7 +5,7 @@ import pygame
 import time
 from utilities import clear
 
-palabras = ["silla","dedo","teclado","bueno","killua","zanahoria"]
+palabras = ["silla","dedo","teclado","bueno","zanahoria"]
 jugando = True
 tablero = "------{}\n--------\n------{}-\n--------\n{}-------\n--------"
 puntuacion = 0
